@@ -1,19 +1,22 @@
-var template_header = document.createElement("template"); //<template> </template> RULE
+//MUST HAVE - CREATE A TEMPLATE TAG
+var template_subheading = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_header.innerHTML = `
-<div class = "header">
-<h1> How is Fast Fashion made? </h1>
+template_subheading.innerHTML = `
+<div class = "subheading">
+<p>Since fast fashion is mass-produced globally, sweatshops exploit and harass their workforce in order to meet the economic demand.</p>
 </div>
 <style>
-h1 {
-    color: #393b14;
+p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9a8f86;
 }
 </style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheHeader extends HTMLElement {
+class TheSubHeading extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -25,11 +28,11 @@ class TheHeader extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_header.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.appendChild(template_subheading.content.cloneNode(true)); //use the template to make a clone
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-header", TheHeader)
+customElements.define("the-subheading", TheSubHeading)
