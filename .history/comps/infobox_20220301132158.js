@@ -8,12 +8,11 @@ template_info.innerHTML = `
 </div>
 
 <style>
-h3 {
+.h3 {
     font-size: 20px;
     font-weight: bold;
     color: #393B1A;
     text-align: left;
-    margin-left: 30px;
 }
 `;
 

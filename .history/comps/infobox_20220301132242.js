@@ -12,8 +12,7 @@ h3 {
     font-size: 20px;
     font-weight: bold;
     color: #393B1A;
-    text-align: left;
-    margin-left: 30px;
+    text-align: right;
 }
 `;
 

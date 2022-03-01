@@ -13,7 +13,7 @@ h3 {
     font-weight: bold;
     color: #393B1A;
     text-align: left;
-    margin-left: 30px;
+    margin: 30px;
 }
 `;
 
