@@ -19,8 +19,21 @@
     #info {
       display: grid;
       grid-template-columns: 2fr 1fr 2fr;
+      grid-template-areas: 
+        "header header"
+        "content"
+        "infothree infofour"
     }
-    
+    .salary {
+      grid-area: header;
+    }
+    .asia {
+      grid-area: header;
+    }
+    .environment {
+      grid-area: content;
+    }
+
     button {
       background-color: #CBAF8F;
       color: #5E412B;

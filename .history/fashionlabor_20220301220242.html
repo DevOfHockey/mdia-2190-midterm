@@ -19,8 +19,26 @@
     #info {
       display: grid;
       grid-template-columns: 2fr 1fr 2fr;
+      grid-template-areas: 
+        "header header"
+        "content"
+        "sidebar sidebar"
     }
-    
+    .salary {
+      grid-area: header;
+    }
+    .asia {
+      grid-area: header;
+    }
+    .environment {
+      grid-area: content;
+    }
+    .people {
+      grid-area: sidebar;
+    }
+    .sweatshops {
+      grid-area: sidebar;
+    }
     button {
       background-color: #CBAF8F;
       color: #5E412B;

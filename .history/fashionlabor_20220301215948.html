@@ -19,8 +19,17 @@
     #info {
       display: grid;
       grid-template-columns: 2fr 1fr 2fr;
+      grid-template-areas: 
+        "infoone infotwo"
+        "content"
+        "infothree infofour"
     }
-    
+    .salary {
+      grid-area: infooone;
+    }
+    .asia {
+      grid-area: infotwo;
+    }
     button {
       background-color: #CBAF8F;
       color: #5E412B;
@@ -72,7 +81,7 @@
           name="40 million people work in Garment factories">
         </the-info>
       </div>
-
+      
       <div class="sweatshops">
         <the-info
           name="How is it like to work in sweatshops?">

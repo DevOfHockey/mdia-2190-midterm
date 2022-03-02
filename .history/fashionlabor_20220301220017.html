@@ -19,6 +19,19 @@
     #info {
       display: grid;
       grid-template-columns: 2fr 1fr 2fr;
+      grid-template-areas: 
+        "infoone infotwo"
+        "content"
+        "infothree infofour"
+    }
+    .salary {
+      grid-area: infooone;
+    }
+    .asia {
+      grid-area: infotwo;
+    }
+    .environment {
+      grid-area: content;
     }
     
     button {
