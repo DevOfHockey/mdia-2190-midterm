@@ -3,9 +3,9 @@ var template_info = document.createElement("template"); //<template> </template>
 
 //To-do - CREATE THE UI HERE!
 template_info.innerHTML = `
-<div id = "info_cont">
+<div class = "info_cont">
 <h3>Info Title<h3>
-<img id='image' src='/imgs/sweatshopsgraph.svg' />
+<img id='sweatshopsgraph' src='/imgs/sweatshopsgraph.svg' />
 </div>
 
 <style>
@@ -15,11 +15,6 @@ h3 {
     color: #393B1A;
     text-align: left;
     margin-left: 30px;
-}
-
-#image {
-    width: 400px;
-    height: 300px;
 }
 `;
 
@@ -37,11 +32,8 @@ class TheInfo extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_info.content.cloneNode(true)); //use the template to make a clone
-        //console.log(this.getAttribute("name"))
-        if(this.getAttribute("name"))
-        this.shadowRoot.querySelector("#info_cont > h3").innerText = this.getAttribute("name");
-        this.shadowRoot.querySelector("#info_cont > image").src = this.getAttribute("img");
-    
+        console.log(this.getAttribute("name"))
+        this.shadowRoot.querySelector(".info_cont > h3").innerText = this.getAttribute("name");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

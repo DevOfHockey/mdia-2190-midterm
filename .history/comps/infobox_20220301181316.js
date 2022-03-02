@@ -38,10 +38,13 @@ class TheInfo extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_info.content.cloneNode(true)); //use the template to make a clone
         //console.log(this.getAttribute("name"))
-        if(this.getAttribute("name"))
+        if(this.getAttribute("name")){
         this.shadowRoot.querySelector("#info_cont > h3").innerText = this.getAttribute("name");
-        this.shadowRoot.querySelector("#info_cont > image").src = this.getAttribute("img");
-    
+        }
+
+        if(this.getAttribute("img src")){
+        this.shadowRoot.querySelector("#info_cont > image").src = this.getAttribute("img src");
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

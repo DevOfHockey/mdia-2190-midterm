@@ -5,7 +5,7 @@ var template_info = document.createElement("template"); //<template> </template>
 template_info.innerHTML = `
 <div id = "info_cont">
 <h3>Info Title<h3>
-<img id='image' src='/imgs/sweatshopsgraph.svg' />
+<img id='image' src='https://www.flaticon.com/premium-icon/dollar_3044914?term=money&page=1&position=41&page=1&position=41&related_id=3044914&origin=search' />
 </div>
 
 <style>
@@ -38,10 +38,9 @@ class TheInfo extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_info.content.cloneNode(true)); //use the template to make a clone
         //console.log(this.getAttribute("name"))
-        if(this.getAttribute("name"))
+        if(this.getAttribute("name")){
         this.shadowRoot.querySelector("#info_cont > h3").innerText = this.getAttribute("name");
-        this.shadowRoot.querySelector("#info_cont > image").src = this.getAttribute("img");
-    
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
