@@ -28,6 +28,6 @@ button {
     left: 42%;
 }
 
-button {
-    align-self: center;
+.environment > button {
+    bottom: 30%;
 }

@@ -22,12 +22,11 @@ button {
     border-radius: 5px;
     width: 250px;
 }
-.environment {
+.environment > button {
     align-self: center;
     position: absolute;
     left: 42%;
 }
-
-button {
+.environment > img {
     align-self: center;
 }

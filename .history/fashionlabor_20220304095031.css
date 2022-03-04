@@ -24,10 +24,8 @@ button {
 }
 .environment {
     align-self: center;
-    position: absolute;
     left: 42%;
 }
-
-button {
+.environment > img {
     align-self: center;
 }
