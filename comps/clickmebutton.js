@@ -45,7 +45,12 @@ class ClickMeButton extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
-    }
+    
+        //console.log(this.getAttribute("name"))
+        if(this.getAttribute("name"))
+        this.shadowRoot.querySelector(".clickme-button").innerText = this.getAttribute("name");
+
+      }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
