@@ -5,7 +5,6 @@ var template_info = document.createElement("template"); //<template> </template>
 template_info.innerHTML = `
 <div id = "info_cont">
 <h3>Info Title<h3>
-<img id='image' src='/imgs/sweatshopsgraph.svg' />
 </div>
 
 <style>
@@ -15,11 +14,6 @@ h3 {
     color: #393B1A;
     text-align: left;
     margin-left: 30px;
-}
-
-#image {
-    width: 400px;
-    height: 300px;
 }
 `;
 
@@ -40,12 +34,10 @@ class TheInfo extends HTMLElement {
         //console.log(this.getAttribute("name"))
         if(this.getAttribute("name"))
         this.shadowRoot.querySelector("#info_cont > h3").innerText = this.getAttribute("name");
-        this.shadowRoot.querySelector("#info_cont > image").src = this.getAttribute("img");
-    
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-info", TheInfo)
+customElements.define("info-title", TheInfo)
