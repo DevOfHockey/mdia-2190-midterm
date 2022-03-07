@@ -5,7 +5,6 @@ var template_info = document.createElement("template"); //<template> </template>
 template_info.innerHTML = `
 <div id = "info_cont">
 <h3>Info Title<h3>
-<img id='image' src='/imgs/sweatshopsgraph.svg' />
 </div>
 
 <style>

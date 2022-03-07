@@ -33,4 +33,5 @@ button {
 }
 
 .salary > img {
-    display: flex;
+    display: grid;
+}

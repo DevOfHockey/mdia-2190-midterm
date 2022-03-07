@@ -33,4 +33,7 @@ button {
 }
 
 .salary > img {
-    display: flex;
+    display: grid;
+    grid-template-columns: 40px 50px;
+    grid-template-rows: 25% 25%;
+}

@@ -33,4 +33,24 @@ button {
 }
 
 .salary > img {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "content content"
+}
+
+.grid-item-1 {
+    grid-area: header;
+}
+
+.grid-item-2 {
+    grid-area: header;
+}
+
+.grid-item-3 {
+    grid-area: content;
+}
+
+.grid-item-4 {
+    grid-area: content;
+}

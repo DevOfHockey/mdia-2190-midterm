@@ -44,6 +44,9 @@ class TheInfo extends HTMLElement {
         if(this.getAttribute("img")){
         this.shadowRoot.querySelector("img").src = this.getAttribute("img");
         }
+        if(this.getAttribute("img2")){
+            this.shadowRoot.querySelector("img").src = this.getAttribute("img2");
+            }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

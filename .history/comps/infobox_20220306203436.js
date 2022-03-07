@@ -42,7 +42,7 @@ class TheInfo extends HTMLElement {
         this.shadowRoot.querySelector("#info_cont > h3").innerText = this.getAttribute("name");
         } 
         if(this.getAttribute("img")){
-        this.shadowRoot.querySelector("img").src = this.getAttribute("img");
+        this.shadowRoot.querySelector("#info_cont > img").src = this.getAttribute("img");
         }
     }
 
