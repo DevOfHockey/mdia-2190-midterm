@@ -29,6 +29,5 @@ button {
 }
 
 button {
-    display:flex;
     align-self: center;
 }

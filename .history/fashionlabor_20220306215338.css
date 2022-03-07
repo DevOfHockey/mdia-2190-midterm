@@ -29,6 +29,9 @@ button {
 }
 
 button {
-    display:flex;
     align-self: center;
 }
+
+.salary > img {
+    display: grid;
+    grid-template-columns: repeat(2, 50px);

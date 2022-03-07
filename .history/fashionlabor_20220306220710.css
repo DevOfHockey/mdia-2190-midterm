@@ -29,6 +29,7 @@ button {
 }
 
 button {
-    display:flex;
     align-self: center;
 }
+
+.salary > img {
