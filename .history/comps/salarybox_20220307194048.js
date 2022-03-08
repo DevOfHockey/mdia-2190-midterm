@@ -33,16 +33,12 @@ class TheSalary extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_salary.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').onclick = () => this.showAnswer();
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').onclick = () => this.showAnswer();
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').onclick = () => this.showAnswer();
+        this.shadowRoot.querySelector('#salarybox').onclick = () => this.showAnswer();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
    showAnswer(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').src= '/imgs/correctanswer.svg';
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').src= '/imgs/correctanswer.svg';
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '/imgs/wronganswer.svg';
     }
 }
 
