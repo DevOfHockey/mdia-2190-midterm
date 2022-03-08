@@ -39,7 +39,7 @@ class TheSalary extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    showAnswerone(){
+   showAnswerone(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').src= '/imgs/correctanswer.svg';
     }
     showAnswertwo(){

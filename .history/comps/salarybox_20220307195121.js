@@ -39,14 +39,14 @@ class TheSalary extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    showAnswerone(){
+   showAnswerone(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').src= '/imgs/correctanswer.svg';
     }
     showAnswertwo(){
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').src= '/imgs/wronganswer.svg';
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').src= '/imgs/correctanswer.svg';
     }
     showAnswerthree(){
-        this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '/imgs/wronganswer.svg';
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '/imgs/correctanswer.svg';
     }
 }
 
