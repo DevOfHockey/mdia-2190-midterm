@@ -34,6 +34,11 @@ p {
     font-size: 25px;
     font-weight: bold;
     color: #393B1A;
-    text-align: left;
+    text-align: center;
     margin-left: 10px;
+}
+span {
+    font-size: 35px;
+    text-align: center;
+    margin-left: 200px;
 }
