@@ -8,14 +8,14 @@ img {
     width: 200px;
     height: 200px;
 }
+
+
 </style>
 
-<div id="maincont">
-    <div id="salarybox">
-        <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
-        <img class="fivedollar" src="/imgs/5dollar.svg">
-        <img class="tendollar" src="/imgs/10dollar.svg">
-    </div>
+<div id="salarybox">
+    <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
+    <img class="fivedollar" src="/imgs/5dollar.svg">
+    <img class="tendollar" src="/imgs/10dollar.svg">
 </div>
 `;
 

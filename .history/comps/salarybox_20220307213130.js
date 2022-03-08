@@ -10,12 +10,10 @@ img {
 }
 </style>
 
-<div id="maincont">
-    <div id="salarybox">
-        <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
-        <img class="fivedollar" src="/imgs/5dollar.svg">
-        <img class="tendollar" src="/imgs/10dollar.svg">
-    </div>
+<div id="salarybox">
+    <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
+    <img class="fivedollar" src="/imgs/5dollar.svg">
+    <img class="tendollar" src="/imgs/10dollar.svg">
 </div>
 `;
 
@@ -36,6 +34,7 @@ class TheSalary extends HTMLElement {
         this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').onclick = () => this.showAnswerone();
         this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').onclick = () => this.showAnswertwo();
         this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').onclick = () => this.showAnswerthree();
+        this.shadowRoot.querySelector('#salarybox').onclick = () => this.resetAnswers();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -47,6 +46,11 @@ class TheSalary extends HTMLElement {
     }
     showAnswerthree(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '/imgs/wronganswer.svg';
+    }
+    resetAnswers(){
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '/imgs/10dollar.svg';
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').src= '/imgs/5dollar.svg';
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').src= '/imgs/2dollar.svg';
     }
 }
 

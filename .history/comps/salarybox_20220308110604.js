@@ -36,6 +36,7 @@ class TheSalary extends HTMLElement {
         this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').onclick = () => this.showAnswerone();
         this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').onclick = () => this.showAnswertwo();
         this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').onclick = () => this.showAnswerthree();
+        this.shadowRoot.querySelector('#maincont').onclick = () => this.resetAnswers();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -47,6 +48,9 @@ class TheSalary extends HTMLElement {
     }
     showAnswerthree(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '/imgs/wronganswer.svg';
+    }
+    resetAnswers(){
+        this.shadowRoot.querySelector('').src= '/imgs/10dollar';
     }
 }
 

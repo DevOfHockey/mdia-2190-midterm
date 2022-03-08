@@ -8,14 +8,14 @@ img {
     width: 200px;
     height: 200px;
 }
+
+
 </style>
 
-<div id="maincont">
-    <div id="salarybox">
-        <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
-        <img class="fivedollar" src="/imgs/5dollar.svg">
-        <img class="tendollar" src="/imgs/10dollar.svg">
-    </div>
+<div id="salarybox">
+    <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
+    <img class="fivedollar" src="/imgs/5dollar.svg">
+    <img class="tendollar" src="/imgs/10dollar.svg">
 </div>
 `;
 
@@ -41,6 +41,8 @@ class TheSalary extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     showAnswerone(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(1)').src= '/imgs/correctanswer.svg';
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').src= '5dollar.svg';
+        this.shadowRoot.querySelector('#salarybox > img:nth-child(3)').src= '10dollar.svg';
     }
     showAnswertwo(){
         this.shadowRoot.querySelector('#salarybox > img:nth-child(2)').src= '/imgs/wronganswer.svg';
