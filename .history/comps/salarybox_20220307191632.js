@@ -12,10 +12,10 @@ img {
 
 </style>
 
-<div id="salarybox">
-    <img class="twodollar" src="/imgs/2dollar.svg" onclick="myFunction()">
-    <img class="fivedollar" src="/imgs/5dollar.svg">
-    <img class="tendollar" src="/imgs/10dollar.svg">
+<div class="salarybox">
+    <img src="/imgs/2dollar.svg" onclick="document.getElementById('img').src='/imgs/correctanswer.svg'">
+    <img src="/imgs/5dollar.svg">
+    <img src="/imgs/10dollar.svg">
 </div>
 `;
 
@@ -33,13 +33,10 @@ class TheSalary extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_salary.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector('#salarybox').onclick = () => this.showAnswer();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-   showAnswer(){
-        this.shadowRoot.querySelector('#salarybox > img').src= '/imgs/correctanswer.svg';
-    }
+   
 }
 
 //MUST HAVE - define the tag for the custom elements
