@@ -1,27 +1,19 @@
-//MUST HAVE - CREATE A TEMPLATE TAG
-var template_salary = document.createElement("template"); //<template> </template> RULE
+var template_header = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_salary.innerHTML = `
-<style>
-img {
-    display: flex;
-    width: 200px;
-    height: 200px;
-}
-
-</style>
-
-<div class="salarybox">
-    <img src="/imgs/2dollar.svg">
-    <img src="/imgs/5dollar.svg">
-    <img src="/imgs/7dollar.svg">
-    <img src="/imgs/10dollar.svg">
+template_header.innerHTML = `
+<div class = "header">
+<h1> How is Fast Fashion made? </h1>
 </div>
+<style>
+h1 {
+    color: #393b14;
+}
+</style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheSalary extends HTMLElement {
+class TheHeader extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -33,11 +25,11 @@ class TheSalary extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_salary.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.appendChild(template_header.content.cloneNode(true)); //use the template to make a clone
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-salary", TheSalary)
+customElements.define("the-header", TheHeader)

@@ -10,12 +10,15 @@ img {
     height: 200px;
 }
 
+img:nth-child(3) {
+    display: flex;
+}
+
 </style>
 
 <div class="salarybox">
     <img src="/imgs/2dollar.svg">
     <img src="/imgs/5dollar.svg">
-    <img src="/imgs/7dollar.svg">
     <img src="/imgs/10dollar.svg">
 </div>
 `;

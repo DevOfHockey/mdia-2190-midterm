@@ -5,7 +5,7 @@ var template_salary = document.createElement("template"); //<template> </templat
 template_salary.innerHTML = `
 <style>
 img {
-    display: flex;
+    display: block;
     width: 200px;
     height: 200px;
 }

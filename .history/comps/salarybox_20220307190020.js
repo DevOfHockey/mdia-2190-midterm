@@ -5,11 +5,17 @@ var template_salary = document.createElement("template"); //<template> </templat
 template_salary.innerHTML = `
 <style>
 img {
-    display: flex;
     width: 200px;
     height: 200px;
 }
 
+img:nth-child(3) {
+    display: flex;
+}
+
+img:nth-child(4) {
+    display: flex;
+}
 </style>
 
 <div class="salarybox">
