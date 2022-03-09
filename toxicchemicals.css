@@ -1,33 +1,142 @@
+html {
+    background-color: #E7E2DC;
+}
+
+.conts {
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
 .topbox { 
-    display: flex;
+    display: grid;
     justify-content: center;
+    justify-self: center;
     align-items: center;
-    width: 300px; 
+    grid-column: 2 / 3;
+    grid-row: 1;
     height: 200px; 
+    width: 300px;
     border-radius: 10px;
     background-color: #CBAF8F; 
-    color: #5E412B;
+    color: #393B1A;
     border: 2px solid black;
     font: 20px;
     line-height: 30px;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 20px;
     padding: 15px;
-    margin: 200px;
+    margin-top: 130px;
     font-family: 'Open Sans',serif;
     text-align: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
   
-  .header {
-      padding: 5x;
+  .rectangle {
+      display: grid; 
+      justify-content: center;
+      justify-self: center;
+      grid-column: 2 / 3;
+      grid-row: 2;
+      margin-top: 80px;
+      width: 50px;
+      height: 60px;
+      background-color: #393B1A;
   }
-  
+
+  .arrow {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    grid-column: 2 / 3;
+    grid-row: 2;
+    margin-top: 130px;
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 70px solid #393B1A;
+  }
+
   .sub {
-      padding: 10px;
+    margin-top: 50px;
+    font-display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+}
+
+  .header {
+      margin-top: 50px;
+      grid-column: 2 / 3;
+  }
+
+  .title {
+    margin-top: 50px;
+    grid-column: 2 / 3;
+    padding: 5px;
+    font-family: 'Open Sans',serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    color: #393B1A;
+  }
+
+  hr {
+    border: 1.5px solid #393B1A; 
+    width: 250px;
   }
   
   .secsteps {
-      padding: 10px;
-      margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
   }
+
+  .beaker {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-column: 2 / 3;
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.question {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-column: 2 / 3;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.bub {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    grid-column: 2 / 3;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.circ {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    grid-column: 2 / 3;
+    gap: 15px;
+    margin-top: 50px;
+}

@@ -5,42 +5,62 @@ var template_potion = document.createElement("template"); //<template> </templat
 template_potion.innerHTML = `
 <style>
 .potion {
-width: 25px;
-height: 30px;
-margin-left: 22px;
-background: #E7E2DC;
-border: 1px solid #000000;
-box-sizing: border-box;
-font-size: 12px;
-display: flex;
-justify-content:center;
-align-items: center;
+    width: 25px;
+    height: 30px;
+    margin-left: 23px;
+    background: #E7E2DC;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    font-size: 12px;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
 }
 
 .potions {
-width: 69px;
-height: 69px;
-border-radius: 50%;
-margin-bottom: 5px;
-background: #855DD9;
-border: 1px solid #000000;
-box-sizing: border-box;
-font-family: Open Sans;
-font-weight: bold;
-font-size: 12px;
-line-height: 33px;
-display: flex;
-justify-content:center;
-align-items: center;
-text-align: center;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: grid;
+    width: 69px;
+    height: 69px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    background: #855DD9;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 33px;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+<style id='mystyle'>
+    .bkg {
+      position:fixed;
+      left:0;
+      top:0;
+      z-index:-1;
+      width:100vw;
+      height:100vh;
+    }
+
+    .bkg img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
 </style>
 
 <div class="potion"></div>
-<div class="potions">
-25 g
+<div class="potions">25 g</div>
+
+<div class='bkg'>
+    <img src="./imgs/potion.svg' />
 </div>
+
 
 `;
 
@@ -60,12 +80,13 @@ class Potion extends HTMLElement {
         this.shadowRoot.appendChild(template_potion.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".potions").onclick = () => this.changeColor(
             this.getAttribute('bg')
-            );
-  
+            );   
+
+        this.shadowRoot.querySelector(".bkg").onclick = () => this.changeBG();
+
         if(this.getAttribute("text")){
           this.shadowRoot.querySelector(".potions").innerText = this.getAttribute("text");
         }
-        this.shadowRoot.querySelector(".potions").onclick = () => this.changeText();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -73,6 +94,10 @@ class Potion extends HTMLElement {
         this.shadowRoot.querySelector(".potions").style.cssText = `
         background-color:${color};
         `;
+
+    changeBG(bkg='./imgs/potion.svg'){
+        this.shadowRoot.querySelector('.bkg > img').src = `bkg`;
+          }
     }
 }
 

@@ -4,22 +4,22 @@ var template_questionbox = document.createElement("template"); //<template> </te
 //To-do - CREATE THE UI HERE!
 template_questionbox.innerHTML = `
 <style>
-.box {width: 134px;
-width: 134px;
-height: 134px;
-background-color: #485470;
-margin: 5px;
+.box {
+    display: grid;
+    justify-content:center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    width: 134px;
+    height: 134px;
+    background-color: #485470;
+    margin: 5px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
 
-font-family: Open Sans;
-font-weight: bold;
-font-size: 18px;
-line-height: 25px;
-display: flex;
-justify-content:center;
-align-items: center;
-text-align: center;
-
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 </style>

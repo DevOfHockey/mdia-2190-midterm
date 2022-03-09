@@ -9,7 +9,7 @@ font-family: Open Sans;
 font-weight: bold;
 font-size: 20px;
 line-height: 65px;
-display: flex;
+text-align: center;
 justify-content:center;
 align-items: center;
 text-align: center;

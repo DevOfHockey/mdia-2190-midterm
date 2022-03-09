@@ -8,8 +8,6 @@ template_subheading.innerHTML = `
 font-family: Open Sans;
 font-weight: bold;
 font-size: 15px;
-display:flex;
-justify-content:center;
 line-height: 33px;
 text-align: center;
 color: #988F87;
@@ -17,9 +15,7 @@ color: #988F87;
 </style>
 
 <div class="subhead">
-Go on a journey with us to learn more about what
-goes into fast fashion and its effects on the world 
-and it’s people.
+Go on a journey with us to learn more about what goes into fast fashion and its effects on the world and it’s people.
 </div>
 `;
 
@@ -37,8 +33,8 @@ class Subheading extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_subheading.content.cloneNode(true)); //use the template to make a clone
-        if(this.getAttribute("subheading")){
-            this.shadowRoot.querySelector(".subhead").innerText = this.getAttribute("subheading");
+        if(this.getAttribute("subheader")){
+            this.shadowRoot.querySelector(".subhead").innerText = this.getAttribute("subheader");
           }
     }
 
