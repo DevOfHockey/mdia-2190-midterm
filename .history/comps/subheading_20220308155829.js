@@ -3,6 +3,22 @@ var template_subheading = document.createElement("template"); //<template> </tem
 
 //To-do - CREATE THE UI HERE!
 template_subheading.innerHTML = `
+<<<<<<< HEAD
+<div class = "subheading">
+<p>Since fast fashion is mass-produced globally, sweatshops exploit and harass their workforce in order to meet the economic demand.</p>
+</div>
+<style>
+p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9a8f86;
+}
+</style>
+`;
+
+//MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
+class TheSubHeading extends HTMLElement {
+=======
 <style>
 .subhead {
 font-family: Open Sans;
@@ -25,6 +41,8 @@ and it’s people.
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
 class Subheading extends HTMLElement {
+>>>>>>> origin
+
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
         super(); //pass on the HTMLElement super powers!
@@ -36,14 +54,20 @@ class Subheading extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_subheading.content.cloneNode(true)); //use the template to make a clone
+<<<<<<< HEAD
+=======
         if(this.getAttribute("subheading")){
             this.shadowRoot.querySelector(".subhead").innerText = this.getAttribute("subheading");
           }
+>>>>>>> origin
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
+<<<<<<< HEAD
+customElements.define("the-subheading", TheSubHeading)
+=======
 customElements.define("sub-heading", Subheading)
-
+>>>>>>> origin

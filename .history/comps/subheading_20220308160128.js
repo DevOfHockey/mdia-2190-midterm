@@ -3,6 +3,7 @@ var template_subheading = document.createElement("template"); //<template> </tem
 
 //To-do - CREATE THE UI HERE!
 template_subheading.innerHTML = `
+=======
 <style>
 .subhead {
 font-family: Open Sans;
@@ -25,6 +26,8 @@ and it’s people.
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
 class Subheading extends HTMLElement {
+>>>>>>> origin
+
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
         super(); //pass on the HTMLElement super powers!
@@ -39,11 +42,13 @@ class Subheading extends HTMLElement {
         if(this.getAttribute("subheading")){
             this.shadowRoot.querySelector(".subhead").innerText = this.getAttribute("subheading");
           }
+>>>>>>> origin
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
+=======
 customElements.define("sub-heading", Subheading)
-
+>>>>>>> origin
