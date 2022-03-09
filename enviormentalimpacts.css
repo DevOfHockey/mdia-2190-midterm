@@ -1,17 +1,39 @@
 body {
     background-color: #e8e3dc;
     font-family: Arial, Helvetica, sans-serif;
+    float: center;
+}
+
+h3 {
+    text-align: center;
 }
 
 .header {
-    text-align: center; 
     font-family: Arial, Helvetica, sans-serif;
-}
-/* 
-#grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-}  */
+    justify-content: center;
+    text-align: center;
+}
+
+.trees {
+    display: flex;
+    justify-content: center;
+}
+
+.tree {
+    margin: 20px;
+}
+
+.colorboxes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    padding: 30px;
+}
 
 button {
     background-color: #CBAF8F;
@@ -26,12 +48,15 @@ button {
     width: 250px;
 } 
 
+
+
 /* .learnmorebutton {
     align-self: center;
     position: absolute;
     left: 42%;
-} */
+} 
 
-/* button {
+button {
     align-self: center;
-} */
+}  */
+
