@@ -11,7 +11,7 @@ template_women.innerHTML = `
 }
 
 .women:hover {
-    filter: drop-shadow(2px 2px 2px #A8947D);
+    filter: drop-shadow(2px 2px 2px #6A645F);
 }
 </style>
 

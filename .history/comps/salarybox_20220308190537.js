@@ -10,17 +10,8 @@ img {
 }
 
 img.twodollar:hover {
-    filter: drop-shadow(5px 5px 5px #67664F);
+    filter: drop-shadow(5px 5px 5px black);
 }
-
-img.fivedollar:hover {
-    filter: drop-shadow(5px 5px 5px #67664F);
-}
-
-img.tendollar:hover {
-    filter: drop-shadow(5px 5px 5px #67664F);
-}
-
 </style>
 
 <div id="maincont">

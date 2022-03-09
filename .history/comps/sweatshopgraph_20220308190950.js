@@ -14,19 +14,7 @@ div {
     text-align: center;
 }
 .China:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.Vietnam:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.Bangladesh:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.India:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.Cambodia:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
+    filter: drop-shadow(5px 5px 5px #67664F);
 }
 </style>
 

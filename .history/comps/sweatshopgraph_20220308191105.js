@@ -16,18 +16,6 @@ div {
 .China:hover {
     filter: drop-shadow(2px 2px 2px #6A645F);
 }
-.Vietnam:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.Bangladesh:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.India:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
-.Cambodia:hover {
-    filter: drop-shadow(2px 2px 2px #6A645F);
-}
 </style>
 
 <div id="countries">

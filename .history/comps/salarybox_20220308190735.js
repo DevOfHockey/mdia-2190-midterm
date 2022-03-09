@@ -17,7 +17,7 @@ img.fivedollar:hover {
     filter: drop-shadow(5px 5px 5px #67664F);
 }
 
-img.tendollar:hover {
+img.fivedollar:hover {
     filter: drop-shadow(5px 5px 5px #67664F);
 }
 

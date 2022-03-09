@@ -1,27 +1,28 @@
 //1- CREATE A TEMPLATE TAG
-var template_women = document.createElement("template"); //<template> </template> RULE
+var template_sweatshop = document.createElement("template"); //<template> </template> RULE
 
 //2- CREATE UI HERE (optional)!
-template_women.innerHTML = `
+template_sweatshop.innerHTML = `
 <style>
-.women {
+.factory {
     width: 450px;
     height: 300px;
     margin-left: 5%;
 }
 
-.women:hover {
-    filter: drop-shadow(2px 2px 2px #A8947D);
+.factory:hover {
+    filter: drop-shadow(2px 2px 2px ##6A645F);
 }
+
 </style>
 
-<div id="womenpercent">
-    <img class="women" src="/imgs/women.svg">
+<div id="sweatshopimg">
+    <img class="factory" src="/imgs/sweatshop.svg">
 </div>
 `;
 
 //3- CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheWomen extends HTMLElement {
+class TheSweatshop extends HTMLElement {
 
     //4- CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -33,15 +34,15 @@ class TheWomen extends HTMLElement {
 
     //6- FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_women.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector('#womenpercent > img').onclick = () => this.showAnswer();
+        this.shadowRoot.appendChild(template_sweatshop.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector('#sweatshopimg > img').onclick = () => this.showAnswer();
     }
 
     //7- CREATE THE FUNCTIONALITIES HERE!
     showAnswer(){
-        this.shadowRoot.querySelector('#womenpercent > img').src= '/imgs/womenfact.svg';
+        this.shadowRoot.querySelector('#sweatshopimg > img').src= '/imgs/sweatshopanswer.svg';
     }
 }
 
 //8- define the tag for the custom elements
-customElements.define("the-women", TheWomen)
+customElements.define("the-sweatshop", TheSweatshop)
