@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fashion Labor</title>
+    <script src="comps/header.js"></script> 
+    <script src="comps/subheading.js"></script>
+    <script src="comps/infobox.js"></script>
+    <link rel="stylesheet" href="fashionlabor.css">
+  </head>
+<!-- Header -->
+  <body>
+  <div class="main"></div>
+    <div class="Headings">
+      <the-header 
+        name="Sample Header">
+      </the-header>
+      <the-subheading
+        name="Sample Sub-heading">
+      </the-subheading>
+    </div>
+
+<!-- Images with Info-->
+    <div id="info">
+      <div class="salary">
+        <the-info
+          name="Can you guess how much is the salary of a worker per day?">
+        </the-info>
+        <img src="/imgs/2dollar.svg" class="human" width="200" height="150">
+        <img src="/imgs/5dollar.svg" class="human" width="200" height="150">
+        <img src="/imgs/7dollar.svg" class="human" width="200" height="150">
+        <img src="/imgs/10dollar.svg" class="human" width="200" height="150">
+      </div>
+
+      <div class="asia">
+        <the-info
+          name="40 million people work in Garment factories"
+          img="/imgs/women.svg">
+        </the-info>
+      </div>
+
+      <div class="environment">
+        <img src="/imgs/human.svg" class="human" width="220" height="200">
+        <button>Click here to learn about Environmental Impacts</button>
+      </div>
+
+      <div class="people">
+        <the-info
+          name="Sweatshops in Asia">
+        </the-info>
+      </div>
+
+      <div class="sweatshops">
+        <the-info
+          name="How is it like to work in sweatshops?">
+        </the-info>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>

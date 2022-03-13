@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fashion Labor</title>
+    <script src="comps/header.js"></script> 
+    <script src="comps/infobox.js"></script>
+    <script src="comps/salarybox.js"></script>
+    <script src="comps/sweatshopbox.js"></script>
+    <script src="comps/womenbox.js"></script>
+    <script src="comps/sweatshopgraph.js"></script>
+    <link rel="stylesheet" href="fashionlabor.css">
+  </head>
+<!-- Header -->
+  <body>
+  <div class="main"></div>
+    <div class="Headings">
+      <the-header 
+        name="Sample Header">
+      </the-header>
+      <p class="subheading">Since fast fashion is mass-produced globally, sweatshops exploit and harass their workforce in order to meet the economic demand.</p>
+    </div>
+
+<!-- Images with Info-->
+    <div id="info">
+      <div class="salary">
+        <p>Can you guess how much is the salary of a worker per day?</p>
+        <the-salary></the-salary>
+      </div>
+
+      <div class="asia">
+        <p><span>40 million people</span> work in Garment factories</p>
+        <the-women></the-women>
+      </div>
+
+      <div class="environment">
+        <img src="/imgs/human.svg" class="human" width="220" height="200">
+        <button><a href='enviormentalimpacts.html' alt='Broken Link'>Click here to learn about Environmental Impacts</a></button>
+      </div>
+      <div class="people">
+        <p>Find out the percentage of the Sweatshops in Asia</p>
+        <the-graph></the-graph>
+      </div>
+
+      <div class="sweatshops">
+        <p>How is it like to work inside a sweatshop?</p>
+        <the-sweatshop></the-sweatshop>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
