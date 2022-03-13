@@ -1,10 +1,10 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_button = document.createElement("template"); //<template> </template> RULE
+var template_circle = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_button.innerHTML = `
-<style id='mystyle'>
-.clickme-button { 
+template_circle.innerHTML = `
+<style>
+.circle { 
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -16,23 +16,22 @@ template_button.innerHTML = `
   background: #74722E;
   color: #000;
   border: 5px solid black;
-  
-
   display: flex;
   justify-content: center;
   align-items: center;
+  right: 300px;
 } 
-
 </style>
+
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
   
-  <div class="clickme-button"> 
-    Click<br> Me
+  <div class="circle"> 
+    Click Me
   </div> 
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class ClickMeButton extends HTMLElement {
+class Circle extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -44,18 +43,23 @@ class ClickMeButton extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
-    
-        //console.log(this.getAttribute("name"))
-        if(this.getAttribute("name"))
-        this.shadowRoot.querySelector(".clickme-button").innerText = this.getAttribute("name");
-
-      }
+        this.shadowRoot.appendChild(template_circle.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".circle").onclick = () => this.changeColor(
+            this.getAttribute('bg')
+            );
+  
+        if(this.getAttribute("text")){
+          this.shadowRoot.querySelector(".circle").innerText = this.getAttribute("text");
+        }
+    }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    changeColor(color='#AEA49E') {
+        this.shadowRoot.querySelector(".circle").style.cssText = `
+        background-color:${color};
+        `;
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("clickme-button", ClickMeButton)
-
-
+customElements.define("clickme-button", Circle)
