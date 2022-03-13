@@ -1,10 +1,10 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_circle = document.createElement("template"); //<template> </template> RULE
+var template_clickmebutton = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_circle.innerHTML = `
+template_clickmebutton.innerHTML = `
 <style>
-.circle { 
+.clickmebutton { 
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -25,13 +25,13 @@ template_circle.innerHTML = `
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
   
-  <div class="circle"> 
+  <div class="clickmebutton"> 
     Click Me
   </div> 
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class Circle extends HTMLElement {
+class Clickmebutton extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -43,23 +43,23 @@ class Circle extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_circle.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector(".circle").onclick = () => this.changeColor(
+        this.shadowRoot.appendChild(template_clickmebutton.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".clickmebutton").onclick = () => this.changeColor(
             this.getAttribute('bg')
             );
   
         if(this.getAttribute("text")){
-          this.shadowRoot.querySelector(".circle").innerText = this.getAttribute("text");
+          this.shadowRoot.querySelector(".clickmebutton").innerText = this.getAttribute("text");
         }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     changeColor(color='#AEA49E') {
-        this.shadowRoot.querySelector(".circle").style.cssText = `
+        this.shadowRoot.querySelector(".clickmebutton").style.cssText = `
         background-color:${color};
         `;
     }
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("clickme-button", Circle)
+customElements.define("clickme-button", Clickmebutton)
