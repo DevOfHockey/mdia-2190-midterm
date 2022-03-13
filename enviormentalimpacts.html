@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enviormental Impacts</title>
+    <script src="comps/clickmebutton.js"></script>
+    <script src="comps/infotitle.js"></script>  
+    <script src="comps/header.js"></script> 
+    <script src="comps/questionbox.js"></script> 
+    <script src="comps/sectionheader.js"></script> 
+    <script src="comps/subheading.js"></script> 
+    <script src="comps/textbox.js"></script> 
+    <script src="comps/textbox2.js"></script> 
+    <script src="comps/circle.js"></script> 
+
+    <script src="comps/buttonclick.js"></script> 
+    <link rel="stylesheet" href="enviormentalimpacts.css">
+ </head>
+<body>
+
+
+  <div class="header">
+    <the-header name="Enviormental Impacts"></the-header>
+    <the-subheading name="Consistent mass production of rarely used or unnesesary clothing 
+    (Fast fashion) textiles in primarily unregulated factories make up one
+    of the top 3 largest causes of polution and climate change."></the-subheading>
+    <info-title name="Click on the squares to guess how 
+    many garmets are made per year worldwide?" ></info-title> <!-- can add <br> like so with enter-->
+  </div>
+
+
+
+  <div class = trees>
+    <div class = tree><img src="/imgs/tree1.png" class="idk" width="165" height="300"></div>
+    <div class = tree><img src="/imgs/tree2.png" class="idk" width="165" height="300"></div>
+    <div class = tree><img src="/imgs/tree3.png" class="idk" width="165" height="300"></div>
+    <div class = tree><img src="/imgs/tree4.png" class="idk" width="165" height="300"></div>
+  </div>
+ 
+
+    
+  <div class="question">
+    <question-box 
+      style="margin-left: 20px; margin-right: 20px; margin-top: -80px;"
+      text="200 Million?"
+      bg="#AEA49B"
+    ></question-box>
+    <question-box
+      style="margin-left: 20px; margin-right: 20px; margin-top: -80px;"
+      text="40 Billion?"
+      bg="#AEA49B"
+    ></question-box>
+    <question-box
+      style="margin-left: 20px; margin-right: 20px; margin-top: -80px;"
+      text="500 Million?"
+      bg="#AEA49B"
+    ></question-box>
+    <question-box
+      style="margin-left: 20px; margin-right: 20px; margin-top: -80px;"
+      text="80 Billion?"
+      bg="#4CB280"
+    ></question-box>
+  </div>
+    
+  <!-- SOLUTION TO PREVIOUS ISSUE: need a div for each component -->
+    <div class = thrownaway>
+      <info-title name="But how many times a piece of clothing is
+      worn before being thrown away?"></the-info>
+    </div>
+
+      <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+        <span class="popuptext" id="myPopup">7 times on average. It’s reccomeneded to not buy new clothes unless you’re certain you’ll wear it more than 30 times!
+        </span>
+      </div>
+    </div>
+
+    <div class = subheadingtitle>
+      <info-title name="Ongoing Enviormental Issues"></info-title>
+   </div>
+
+
+   <!-- Animation -->
+   <body style="text-align:center">
+
+    <div class = clothesgrid>
+      <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+        <span class="popuptext" id="myPopup">Use of fertilizers for cotton production contaminates & increases evaporation in heavily impacted communities</span>
+      </div>
+    </div>
+
+    <div class = clothesgrid>
+      <img class = "popup"; src="imgs/clothes1.png" alt="Clothes piece 1" width="150" height="250" onclick="myFunction()"> 
+      <img id = img2; src="imgs/clothes2.png" alt="Clothes piece 2" width="150" height="250" onclick="animate2()" value="Click"> 
+      <img id = img3; src="imgs/clothes3.png" alt="Clothes piece 3" width="150" height="250" onclick="animate3()" value="Click"> 
+      <img id = img4; src="imgs/clothes4.png" alt="Clothes piece 4" width="150" height="250" onclick="animate4()" value="Click"> 
+      <img id = img5; src="imgs/clothes5.png" alt="Clothes piece 5" width="150" height="250" onclick="animate5()" value="Click"> 
+    </div>
+  
+    <!-- <div class = "answerbox">
+      <text-box text="Answer Box"></text-box>
+    </div> -->
+
+    <div class="learnmorebutton">
+      <button>How do we solve this? Click here to learn more</button>
+    </div> 
+
+</body>
+</html>
+
+<script>
+  // MyFunctions purpose: user clicks on div, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+  </script>
+
+
+
+
+
+
+
+
