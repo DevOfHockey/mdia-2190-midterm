@@ -5,6 +5,14 @@ var template_questionbox = document.createElement("template"); //<template> </te
 template_questionbox.innerHTML = `
 <style>
 .box {
+<<<<<<< HEAD
+=======
+    display: grid;
+    justify-content:center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+>>>>>>> 0a2f7343e7215ecd441cfb5b8d580f8e60b81ae0
     width: 134px;
     height: 134px;
     background-color: #485470;
@@ -13,10 +21,14 @@ template_questionbox.innerHTML = `
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
+<<<<<<< HEAD
     display: flex;
     justify-content:center;
     align-items: center;
     text-align: center;
+=======
+
+>>>>>>> 0a2f7343e7215ecd441cfb5b8d580f8e60b81ae0
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 </style>

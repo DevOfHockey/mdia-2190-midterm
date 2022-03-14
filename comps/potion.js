@@ -39,8 +39,6 @@ img.p-three:hover {
     <img class="p-two" src="/imgs/potion2.svg">
     <img class="p-three" src="/imgs/potion3.svg">
     </div>
-</div>
-
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
