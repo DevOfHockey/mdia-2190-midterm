@@ -4,25 +4,23 @@ var template_bubble = document.createElement("template"); //<template> </templat
 //To-do - CREATE THE UI HERE!
 template_bubble.innerHTML = `
 <style>
-.bubbles {
-background: #AEA49B;
-border-radius: 5px;;
-width: 120px;
-height: 90px;
-margin: 5px;
-font-size: 10px;
-display: flex;
-display: justify-content;
-align-items: center;
-text-align: center;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+img {
+    width: 250px;
+    height: 250px;
 }
+
+img.blank:hover {
+    filter: drop-shadow(5px 5px 5px #67664F);
+}
+
 </style>
 
-<div class="bubbles"
-
+<div class="bubbles">
+    <div class="bubble">
+        <img class="blank" src="/imgs/bubble1.svg" onclick="myFunction()">
+    </div>
 </div>
-
 
 `;
 
@@ -40,12 +38,13 @@ class Bubble extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_bubble.content.cloneNode(true)); //use the template to make a clone
-        if(this.getAttribute("text")){
-            this.shadowRoot.querySelector(".bubbles").innerText = this.getAttribute("text");
-          }
+        this.shadowRoot.querySelector('.bubble > img:nth-child(1)').onclick = () => this.showbubble2();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    showbubble2(){
+        this.shadowRoot.querySelector('.bubble > img:nth-child(1)').src= '/imgs/bubble2.svg';
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
