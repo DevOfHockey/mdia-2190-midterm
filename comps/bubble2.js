@@ -1,30 +1,31 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_circle = document.createElement("template"); //<template> </template> RULE
+var template_bubble2 = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_circle.innerHTML = `
+template_bubble2.innerHTML = `
 <style>
 
 img {
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
 }
 
-img.question:hover {
+img.empty:hover {
     filter: drop-shadow(5px 5px 5px #67664F);
 }
 
 </style>
 
-<div class="circles">
-    <div class="circle">
-        <img class="question" src="/imgs/circle1.svg" onclick="myFunction()">
+<div class="bubles">
+    <div class="buble">
+        <img class="empty" src="/imgs/bubble3.svg" onclick="myFunction()">
     </div>
 </div>
+
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class Circle extends HTMLElement {
+class Bubble2 extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -36,15 +37,15 @@ class Circle extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_circle.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector('.circle > img:nth-child(1)').onclick = () => this.showcircle();
+        this.shadowRoot.appendChild(template_bubble2.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector('.buble > img:nth-child(1)').onclick = () => this.showbubble4();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    showcircle(){
-        this.shadowRoot.querySelector('.circle > img:nth-child(1)').src= '/imgs/circle2.svg';
+    showbubble4(){
+        this.shadowRoot.querySelector('.buble > img:nth-child(1)').src= '/imgs/bubble4.svg';
     }
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-circle", Circle)
+customElements.define("the-bubbles", Bubble2)
