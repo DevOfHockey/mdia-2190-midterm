@@ -2,12 +2,6 @@ html {
     background-color: #E7E2DC;
 }
 
-.conts {
-    display: grid;
-    grid-template-columns: .5fr 2fr .5fr;
-    grid-auto-rows: minmax(100px, auto);
-}
-
 .topbox { 
     display: grid;
     justify-content: center;
@@ -133,14 +127,7 @@ html {
 
 .bub {
     display: grid;
-    grid-column: 3 / 3;
-    margin-top: 30px;
-}
-
-.bubs {
-  display: grid;
-  grid-column: 1 / 3;
-  margin-bottom: 30px;
+    grid-column: 2 / 3;
 }
 
 .circ {
@@ -180,4 +167,29 @@ button:hover {
 a {
   text-decoration: none;
   color: #191a0b;
+}
+
+/* Small */
+@media screen and (max-width: 39.9375em) {
+  .conts {
+    display: grid;
+    grid-template-columns: 50px 475px 50px;
+  }
+}
+
+/* Medium and up */
+
+@media screen and (min-width: 40em) {
+  .conts {
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+  }
+}
+/* Large and up */
+
+@media screen and (min-width: 64em) {
+  .conts {
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+  }
 }
