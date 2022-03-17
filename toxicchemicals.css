@@ -173,7 +173,8 @@ a {
 @media screen and (max-width: 39.9375em) {
   .conts {
     display: grid;
-    grid-template-columns: 50px 475px 50px;
+    grid-template-columns: auto 475px auto;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
 
@@ -182,7 +183,8 @@ a {
 @media screen and (min-width: 40em) {
   .conts {
     display: grid;
-    grid-template-columns: .5fr 2fr .5fr;
+    grid-template-columns: auto 2fr auto;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
 /* Large and up */
@@ -190,6 +192,7 @@ a {
 @media screen and (min-width: 64em) {
   .conts {
     display: grid;
-    grid-template-columns: .5fr 2fr .5fr;
+    grid-template-columns: auto 2fr auto;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
